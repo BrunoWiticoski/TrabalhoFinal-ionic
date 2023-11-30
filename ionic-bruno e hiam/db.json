@@ -1,0 +1,127 @@
+{
+  "pessoas": [
+    {
+      "nome": "Ricardo Morais",
+      "cpf": "74157486234",
+      "dataNascimento": "2023-11-27T18:12:09.945Z",
+      "genero": "F",
+      "telefone": "35345565476",
+      "cidade": "Ararnggua",
+      "id": 6
+    },
+    {
+      "nome": "Ana Paula",
+      "cpf": "15485216784",
+      "dataNascimento": "1986-02-10T17:06:00",
+      "genero": "F",
+      "peso": 89,
+      "cidade": "São Paulo",
+      "id": 1
+    },
+    {
+      "nome": "Henrique",
+      "cpf": "35745615486",
+      "dataNascimento": "1986-02-10T17:06:00",
+      "genero": "M",
+      "peso": 89,
+      "cidade": "Ararangua",
+      "id": 2
+    },
+    {
+      "nome": "Paulo Roberto",
+      "cpf": "784565215473",
+      "dataNascimento": "1986-02-10T17:06:00",
+      "genero": "M",
+      "peso": 89,
+      "cidade": "Blumenau",
+      "id": 3
+    },
+    {
+      "nome": "Julia",
+      "cpf": "12548654231",
+      "dataNascimento": "2023-11-29T21:23:08.149Z",
+      "genero": "F",
+      "telefone": "11994568524",
+      "cidade": "Joinvile",
+      "id": 8
+    },
+    {
+      "nome": "Rafael Teixeira",
+      "cpf": "12354876215",
+      "dataNascimento": "2008-11-19T21:57:00",
+      "genero": "M",
+      "telefone": "48996547852",
+      "cidade": "Içara",
+      "id": 9
+    },
+    {
+      "nome": "hiam ",
+      "cpf": "65565546595",
+      "dataNascimento": "2023-11-15T22:56:00",
+      "genero": "M",
+      "telefone": "48561654215",
+      "cidade": "Cricuma",
+      "id": 10
+    }
+  ],
+  "bicicletas": [
+    {
+      "nbicicleta": "Ana Paula",
+      "marca": "Caloi",
+      "modelo": "Speed",
+      "chassi": "6151654651",
+      "cor": "Preta",
+      "medidaaro": "ARO 26",
+      "ntf": "asdasdasdqwe1234123qweasdaswe1231231qweqawsw",
+      "id": 8
+    },
+    {
+      "nbicicleta": "Paulo Roberto",
+      "marca": "Gios",
+      "modelo": "fr3",
+      "chassi": "1154578512",
+      "cor": "Branca",
+      "medidaaro": "ARO 29",
+      "id": 7
+    },
+    {
+      "nbicicleta": "Rafael Teixeira",
+      "marca": "Oggi",
+      "modelo": "Speed",
+      "chassi": "1245875692",
+      "cor": "Azul",
+      "medidaaro": "ARO 29",
+      "ntf": "",
+      "id": 9
+    }
+  ],
+  "metas": [
+    {
+      "nmeta": "José Henrique",
+      "tempo": "2",
+      "km": "56",
+      "data": "2023-11-29T14:19:11.896Z",
+      "media": "28.00",
+      "observacao": "teste",
+      "id": 1
+    },
+    {
+      "nmeta": "Henrique",
+      "tempo": "2.89",
+      "km": "84.6",
+      "data": "2023-11-29T14:43:04.005Z",
+      "media": "29.27",
+      "observacao": "",
+      "id": 2
+    },
+    {
+      "nmeta": "Henrique",
+      "tempo": "2",
+      "km": "4",
+      "data": "2023-11-29T14:49:34.674Z",
+      "media": "2.00",
+      "observacao": "",
+      "id": 3
+    }
+  ]
+}

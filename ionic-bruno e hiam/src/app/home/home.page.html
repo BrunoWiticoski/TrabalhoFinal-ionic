@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" style="padding-right: 10px; border-radius: 50%;">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="margin-left: 10px;">Fullbike-Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" color="dark">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card [routerLink]="['/pessoas']" style="border-radius: 15px; padding: 5px; margin: 5px;">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="people" class="person-add-outline"></ion-icon>
+              Cadastro de Pessoas
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card [routerLink]="['/bicicleta']" style="border-radius: 15px; padding: 5px; margin: 5px;">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="bicycle-outline" class="bicycle-outline"></ion-icon>
+              Cadastro da Bicicleta
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card [routerLink]="['/metas']" style="border-radius: 15px; padding: 5px; margin: 5px;">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="aperture" class="aperture-outline"></ion-icon>
+              Registro de médias
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

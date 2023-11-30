@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de bicicleta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="bicicletasForm">
+
+    <ion-item>
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-select formControlName="nbicicleta" placeholder="Selecione um nome">
+        <ion-select-option *ngFor="let pessoa of pessoas" [value]="pessoa">{{ pessoa }}</ion-select-option>
+      </ion-select>
+      <ion-text
+        color="danger"
+        *ngIf="nbicicleta?.invalid && (nbicicleta?.dirty || nbicicleta?.touched)"
+      >
+        <small *ngIf="nbicicleta?.errors?.['required']">
+          O campo nome é obrigatório
+        </small>
+      </ion-text>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Marca: </ion-label>
+      <ion-input formControlName="marca" type="text"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Modelo: </ion-label>
+      <ion-input formControlName="modelo" type="text"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Selecione o tamanho do aro: </ion-label>
+      <ion-select formControlName="medidaaro" >
+        <ion-select-option *ngFor="let medidaaro of medidasaros" [value]="medidaaro">{{ medidaaro }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Chassi: </ion-label>
+      <ion-input formControlName="chassi" type="text" inputmode="numeric" pattern="[0-9]*"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cor: </ion-label> 
+      <ion-input formControlName="cor" type="text"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Código NTF: </ion-label> 
+      <ion-input formControlName="ntf" type="text"> </ion-input>
+    </ion-item>
+  
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar()" [disabled]="!bicicletasForm.valid">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>

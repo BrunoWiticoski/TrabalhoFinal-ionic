@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registro de médias</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="metasForm">
+
+    <ion-item>
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-select formControlName="nmeta" placeholder="Selecione um nome">
+        <ion-select-option *ngFor="let pessoa of pessoas" [value]="pessoa">{{ pessoa }}</ion-select-option>
+      </ion-select>
+      <ion-text
+        color="danger"
+        *ngIf="nmeta?.invalid && (nmeta?.dirty || nmeta?.touched)"
+      >
+        <small *ngIf="nmeta?.errors?.['required']">
+          O campo nome é obrigatório
+        </small>
+        <small *ngIf="nmeta?.errors?.['minlength']">
+          O campo nome deve conter no mínimo
+          {{ nmeta?.errors?.['minlength'].requiredLength }} caracteres
+        </small>
+        <small *ngIf="nmeta?.errors?.['maxlength']">
+          O campo nome deve conter no máximo
+          {{ nmeta?.errors?.['maxlength'].requiredLength }} caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Km: </ion-label>
+      <ion-input formControlName="km" type="text" inputmode="numeric" pattern="[0-9]+([.][0-9]+)?"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Tempo(h): </ion-label>
+      <ion-input formControlName="tempo" type="text" inputmode="numeric" pattern="[0-9]+([.][0-9]+)?"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Média de Km/h: </ion-label>
+      <ion-input formControlName="media" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data corrida: </ion-label>
+
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            id="datetime"
+            formControlName="data"
+            display-format="DD de MMMM de YYYY"
+            min="1930-01-01"
+            presentation="date"
+            showDefaultButtons="true"
+            doneText="Selecionar"
+            cancelText="Cancelar"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+  
+    <div style="margin-top: 20px;">Observação</div>
+    <ion-item style="margin-top: 30px;">
+      <ion-label>
+        <p></p>
+      </ion-label>
+      <ion-input formControlName="observacao"></ion-input>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar()" [disabled]="!metasForm.valid">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>

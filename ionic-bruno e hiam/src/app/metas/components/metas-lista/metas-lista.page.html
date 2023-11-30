@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="header-title">Registros de médias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" color="dark">
+  <ion-list inset>
+    <ion-item *ngFor="let meta of metas" class="item">
+      <ion-label class="meta-label">{{meta.nmeta}} - <strong>{{meta.media}}km por hora!</strong></ion-label>
+      <ion-buttons class="item-buttons">
+        <ion-button color="black" [routerLink]="['edicao', meta.id]">
+          <ion-icon name="create" slot="icon-only"></ion-icon> 
+        </ion-button>
+        <ion-button color="danger" (click)="confirmarExclusao(meta)">
+          <ion-icon name="trash"  slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+ 
+  <ion-fab vertical="bottom" horizontal="end" class="fab">
+    <ion-fab-button [routerLink]="['cadastro']" color="secondary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
